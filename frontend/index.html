@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karaoke Generator</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Local Karaoke Generator</h1>
+        <p>Enter a YouTube URL to create a karaoke-ready video entirely offline.</p>
+      </header>
+      <main>
+        <section class="input-section">
+          <label for="youtubeUrl">YouTube URL</label>
+          <input id="youtubeUrl" type="url" placeholder="https://www.youtube.com/watch?v=..." />
+          <button id="startBtn">Start Processing</button>
+        </section>
+        <section id="statusSection" class="status hidden">
+          <h2>Pipeline Status</h2>
+          <div id="statusText"></div>
+          <ul id="stageList"></ul>
+          <a id="downloadLink" class="download hidden" href="#" download>Download Karaoke Video</a>
+        </section>
+      </main>
+      <footer>
+        <small>All processing happens locally via Docker; no uploads are sent elsewhere.</small>
+      </footer>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>
